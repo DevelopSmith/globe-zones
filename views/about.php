@@ -1,10 +1,10 @@
 <?php
-echo 'We are awesome!';
+echo 'We are really awesome!';
 
 $dbconn4 = pg_connect("host=ec2-184-73-221-47.compute-1.amazonaws.com port=5432 dbname=d4gggc013bg6aa user=ymvxejayjiolvt password=spFaxG9g21JkZSWv68UYft-Q_W");
 
 
-CREATE TABLE films (
+/*CREATE TABLE films (
     code        char(5),
     title       varchar(40),
     did         integer,
@@ -12,6 +12,6 @@ CREATE TABLE films (
     kind        varchar(10),
     len         interval hour to minute,
     CONSTRAINT production UNIQUE(date_prod)
-);
+);*/
 
 ?>
