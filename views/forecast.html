@@ -1,0 +1,10 @@
+Forecast for {{city}}<span ng-if="weatherResult.city.country">, {{weatherResult.city.country}}</span> {{daysText}}
+<hr />
+Days: <span ng-repeat="day in daysArr"><a href="#/forecast/{{day}}" ng-class="{'bg-primary': days === day}">{{day}}</a><span ng-if="daysArr.indexOf(day) < daysArr.length - 1"> | </span></span>
+<hr />
+<div ng-repeat="w in weatherResult.list">
+	<div class="col-md-6">
+		<weather-panel weather-day="w" convert-to-standard="convertToCel(dayTimeTemp)" convert-to-date="convertToDate(dt)" date-format="MMM, d y"></weather-panel>
+	</div>
+</div>
+<div class="col-md-12"><a href="#/">Back to Search</a></div>

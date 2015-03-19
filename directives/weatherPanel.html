@@ -1,0 +1,19 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3>{{convertToDate({dt: weatherDay.dt}) | date: dateFormat}}</h3>
+	</div>
+	<div class="panel-body">
+		<div class="col-md-6"><strong>Daytime temperature</strong>: {{convertToStandard({dayTimeTemp: weatherDay.temp.day})}} &deg;C</div>
+		<div class="col-md-6"><strong>Night temperature</strong>: {{convertToStandard({dayTimeTemp: weatherDay.temp.night})}} &deg;C</div>
+		<div class="col-md-6"><strong>Evening temperature</strong>: {{convertToStandard({dayTimeTemp: weatherDay.temp.eve})}} &deg;C</div>
+		<div class="col-md-6"><strong>Morning temperature</strong>: {{convertToStandard({dayTimeTemp: weatherDay.temp.morn})}} &deg;C</div>
+		<div class="col-md-6"><strong>Minimium temperature</strong>: {{convertToStandard({dayTimeTemp: weatherDay.temp.min})}} &deg;C</div>
+		<div class="col-md-6"><strong>Maximium temperature</strong>: {{convertToStandard({dayTimeTemp: weatherDay.temp.max})}} &deg;C</div>
+		
+		<div class="col-md-6"><strong>Humidity</strong>: {{weatherDay.humidity}}</div>
+		<div class="col-md-6"><strong>Pressure</strong>: {{weatherDay.pressure}}</div>
+		
+		<div class="col-md-6"><strong>Wind Speed</strong>: {{weatherDay.speed}}</div>
+		<div class="col-md-6"><strong>Wind Degree</strong>: {{weatherDay.deg}}</div>
+	</div>
+</div>
