@@ -3,7 +3,7 @@ var globezones = angular.module('globezones', ['ngRoute', 'ngResource']);
 // SERVICES
 globezones.service('cityService', function(){
 	//var self = this;
-	this.city = 'Cairo';
+	this.city = 'London';
 });
 
 // ROUTES
