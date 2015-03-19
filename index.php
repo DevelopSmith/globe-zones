@@ -14,7 +14,7 @@
 		<nav class="navbar navbar-default">
 			<div class="container">
 				<div class="navbar-header">
-					<a href="#/" class="navbar-brand">Globe Zones</a>
+					<a href="#/" class="navbar-brand" style="color: purple;">Globe Zones</a>
 				</div>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="#/" class="fa fa-home">Home</a></li>
