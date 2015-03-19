@@ -17,6 +17,9 @@ globezones.config(function($routeProvider){
     }).when('/forecast/:days', {
         templateUrl: 'views/forecast.html',
         controller: 'forecastControler'
+    }).when('/about', {
+        templateUrl: 'views/about.php',
+        controller: 'forecastControler'
     });
 });
 

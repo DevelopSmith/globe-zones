@@ -18,6 +18,7 @@
 				</div>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="#/" class="fa fa-home">Home</a></li>
+					<li><a href="#/about" class="fa fa-home">About</a></li>
 				</ul>
 			</div>
 		</nav>
