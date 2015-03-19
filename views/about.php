@@ -14,7 +14,7 @@ pg_exec($db, $query_drop);
 )";
 pg_exec($db, $sql);*/
 
-$ins = INSERT INTO articles(id, title, context) VALUES('1', 'Introduction', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
+$ins = INSERT INTO articles(id, title, context) VALUES('1', 'Introduction', 'Lorem ipsum dolor sit amet, consectetur adipisici.');
 
 pg_exec($db, $ins);
 ?>
