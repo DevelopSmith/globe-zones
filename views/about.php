@@ -21,5 +21,5 @@ pg_exec($db, $ins);*/
 $sel = "SELECT * FROM articles ORDER BY id";
 $selt = pg_exec($db, $sel);
 
-print_r(pg_affected_rows($selt));
+print_r(pg_fetch_array($selt));
 ?>
