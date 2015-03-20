@@ -1,8 +1,8 @@
 <?php
 $db = pg_connect("host=ec2-184-73-221-47.compute-1.amazonaws.com port=5432 dbname=d4gggc013bg6aa user=ymvxejayjiolvt password=spFaxG9g21JkZSWv68UYft-Q_W");
 
-/*$query_drop = "DROP TABLE articles";
-pg_exec($db, $query_drop);*/
+$query_drop = "DROP TABLE articles";
+pg_exec($db, $query_drop);
 
 /*$sql = "CREATE TABLE articles (
 	article_id      intger,
@@ -14,7 +14,7 @@ pg_exec($db, $query_drop);*/
 $sql = "CREATE TABLE articles (
     article_id     integer,
     article_title  varchar(40),
-    article_text   varchar(300),
+    article_text   text,
     article_author varchar(100),
     article_date   date
 )";
