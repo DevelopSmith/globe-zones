@@ -24,6 +24,7 @@ pg_exec($db, $ins);
 
 $sel = "SELECT * FROM articles ORDER BY id";
 $selt = pg_exec($db, $sel);
+var_dump($selt);
 
 $ftchd = pg_fetch_array($selt);
 
