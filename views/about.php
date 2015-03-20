@@ -5,11 +5,11 @@ $query_drop = "DROP TABLE articles";
 pg_exec($db, $query_drop);
 
 $sql = "CREATE TABLE articles (
-	article_id		intger(100) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
-	article_title	varchar(400) NOT NULL ,
+	article_id		intger(100)AUTO_INCREMENT PRIMARY KEY,
+	article_title	varchar(400),
 	article_text 	text NOT NULL ,
-	article_author	varchar(100) NOT NULL ,
-	article_date	date NOT NULL
+	article_author	varchar(100),
+	article_date	date
 )";
 pg_exec($db, $sql);
 
