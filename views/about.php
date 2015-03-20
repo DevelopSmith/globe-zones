@@ -16,7 +16,7 @@ $ins = "INSERT INTO articles(id, title, context) VALUES('1', 'Introduction', 'Lo
 
 pg_exec($db, $ins);*/
 
-pg_exec($db, 'ALTER TABLE articles MODIFY context TEXT');
+echo pg_exec($db, 'ALTER TABLE articles ALTER COLUMN context TYPE text');
 
 $ins = "INSERT INTO articles(id, title, context) VALUES('2', 'Hints for better life', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.')";
 
