@@ -19,7 +19,7 @@ $ins = "INSERT INTO articles(id, title, context) VALUES('1', 'Introduction', 'Lo
 pg_exec($db, $ins);*/
 
 $sel = "SELECT * FROM articles ORDER BY id";
-$sel = pg_exec($db, $sel);
+$selt = pg_exec($db, $sel);
 
-print_r($sel);
+var_dump($selt);
 ?>
