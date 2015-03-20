@@ -16,13 +16,19 @@ $ins = "INSERT INTO articles(id, title, context) VALUES('1', 'Introduction', 'Lo
 
 pg_exec($db, $ins);*/
 
+pg_exec($db, 'ALTER TABLE articles MODIFY context TEXT;');
+
+$ins = "INSERT INTO articles(id, title, context) VALUES('2', 'Hints for better life', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.')";
+
+pg_exec($db, $ins);
+
 $sel = "SELECT * FROM articles ORDER BY id";
 $selt = pg_exec($db, $sel);
 
 $ftchd = pg_fetch_array($selt);
 
-//foreach($ftchd as $row){
-	echo '<h1>'. $ftchd['title'] .'</h1>';
-	echo '<p>'. $ftchd['context'] .'</p>';
-//}
+foreach($ftchd as $row){
+	echo '<h1>'. $row['title'] .'</h1>';
+	echo '<p>'. $row['context'] .'</p>';
+}
 ?>
