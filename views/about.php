@@ -21,8 +21,8 @@ $selt = pg_exec($db, $sel);
 
 $ftchd = pg_fetch_array($selt);
 
-foreach($ftchd as $row){
-	echo '<h1>'. $row['title'] .'</h1>';
-	echo '<p>'. $row['context'] .'</p>';
-}
+//foreach($ftchd as $row){
+	echo '<h1>'. $ftchd['title'] .'</h1>';
+	echo '<p>'. $ftchd['context'] .'</p>';
+//}
 ?>
