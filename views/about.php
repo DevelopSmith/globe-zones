@@ -26,7 +26,7 @@ $sel = "SELECT * FROM articles ORDER BY id";
 $selt = pg_exec($db, $sel);
 
 $ftchd = pg_fetch_array($selt);
-var_dump($fechd);
+var_dump($ftchd);
 
 foreach($ftchd as $row){
 	echo '<h1>'. $row['title'] .'</h1>';
