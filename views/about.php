@@ -1,26 +1,22 @@
 <?php
 $db = pg_connect("host=ec2-184-73-221-47.compute-1.amazonaws.com port=5432 dbname=d4gggc013bg6aa user=ymvxejayjiolvt password=spFaxG9g21JkZSWv68UYft-Q_W");
 
-/*$query_drop = "DROP TABLE films";
+$query_drop = "DROP TABLE articles";
 pg_exec($db, $query_drop);
 
 $sql = "CREATE TABLE articles (
-    id          integer,
-    title       varchar(40),
-    context     varchar(100),
-    date_prod   date
+	article_id		INT(100) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+	article_title	VARCHAR(400) NOT NULL ,
+	article_text 	TEXT NOT NULL ,
+	article_author	VARCHAR(100) NOT NULL ,
+	article_date	DATE NOT NULL
 )";
 pg_exec($db, $sql);
 
-$ins = "INSERT INTO articles(id, title, context) VALUES('1', 'Introduction', 'Lorem ipsum dolor sit amet, consectetur adipisici.')";
+$ins = "INSERT INTO articles(article_title, article_text, article_author, article_date) VALUES('Introduction', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'DevelopSmith', '". date('l jS \of F Y h:i A') ."')";
+pg_exec($db, $ins);
 
-pg_exec($db, $ins);*/
-
-$rs = pg_exec($db, 'ALTER TABLE articles ALTER COLUMN context SET DATA TYPE text(5000)');
-var_dump($rs . '<br><br>');
-
-$ins = "INSERT INTO articles(id, title, context) VALUES('2', 'Hints for better life', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.')";
-
+$ins = "INSERT INTO articles(article_title, article_text, article_author, article_date) VALUES('Abot Us', 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 'Heba Korany', '". date('l jS \of F Y h:i A') ."')";
 pg_exec($db, $ins);
 
 $sel = "SELECT * FROM articles ORDER BY id";
