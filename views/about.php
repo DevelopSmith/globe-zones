@@ -1,5 +1,5 @@
 <?php
-echo 'We are very awesome!!! Yes I am sure';
+echo 'Hello World!!';
 
 $db = pg_connect("host=ec2-184-73-221-47.compute-1.amazonaws.com port=5432 dbname=d4gggc013bg6aa user=ymvxejayjiolvt password=spFaxG9g21JkZSWv68UYft-Q_W");
 
@@ -21,5 +21,5 @@ pg_exec($db, $ins);*/
 $sel = "SELECT * FROM articles ORDER BY id";
 $selt = pg_exec($db, $sel);
 
-var_dump($selt);
+print_r(pg_affected_rows($selt));
 ?>
