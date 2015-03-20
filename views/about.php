@@ -27,7 +27,7 @@ $sel = "SELECT * FROM articles";
 $selt = pg_exec($db, $sel);
 
 $ftchd = pg_fetch_array($selt);
-var_dump($ftchd);
+//var_dump($ftchd);
 
 //foreach($ftchd as $row){
 	echo '<h1>'. $ftchd['article_title'] .'</h1>';
