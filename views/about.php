@@ -20,17 +20,17 @@ $sql = "CREATE TABLE articles (
 )";
 pg_exec($db, $sql);*/
 
-$ins = "INSERT INTO articles(article_id, article_title, article_text, article_author) VALUES(2, 'Introduction', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatm.', 'Heba Korany')";
+$ins = "INSERT INTO articles(article_id, article_title, article_text, article_author) VALUES(4, 'Introduction', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatm.', 'Heba Korany')";
 pg_exec($db, $ins);
 
 $sel = "SELECT * FROM articles ORDER BY article_id";
 $selt = pg_exec($db, $sel);
 
 $ftchd = pg_fetch_array($selt);
-var_dump($ftchd);
+//var_dump($ftchd);
 
-foreach($ftchd as $row){
-	echo '<h1>'. $row['article_title'] .'</h1>';
-	echo '<p>'. $row['article_text'] .'</p>';
-}
+//foreach($ftchd as $row){
+	echo '<h1>'. $ftchd['article_title'] .'</h1>';
+	echo '<p>'. $ftchd['article_text'] .'</p>';
+//}
 ?>
