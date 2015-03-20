@@ -1,5 +1,5 @@
 <?php
-echo 'We are very awesome!!! Yes I am sure';
+echo 'Hello World!';
 
 $db = pg_connect("host=ec2-184-73-221-47.compute-1.amazonaws.com port=5432 dbname=d4gggc013bg6aa user=ymvxejayjiolvt password=spFaxG9g21JkZSWv68UYft-Q_W");
 
@@ -18,7 +18,7 @@ $ins = "INSERT INTO articles(id, title, context) VALUES('1', 'Introduction', 'Lo
 
 pg_exec($db, $ins);*/
 
-$sel = "SELECT * FROM article ORDER BY id";
+$sel = "SELECT * FROM articles ORDER BY id";
 $sel = pg_exec($db, $sel);
 
 print_r($sel);
