@@ -10,7 +10,7 @@ pg_exec($db, $query_drop);*/
 	article_text 	text,
 	article_author	varchar(100),
 	article_date	date
-)";*/
+)";
 $sql = "CREATE TABLE articles (
     article_id     integer,
     article_title  varchar(40),
@@ -18,12 +18,12 @@ $sql = "CREATE TABLE articles (
     article_author varchar(100),
     article_date   date
 )";
-pg_exec($db, $sql);
+pg_exec($db, $sql);*/
 
-$ins = "INSERT INTO articles(article_id, article_title, article_text, article_author, article_date) VALUES(1, 'Introduction', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'DevelopSmith', '". date('l jS \of F Y h:i A') ."')";
+$ins = "INSERT INTO articles(article_id, article_title, article_text, article_author) VALUES(1, 'Introduction', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'DevelopSmith')";
 pg_exec($db, $ins);
 
-$ins = "INSERT INTO articles(article_id, article_title, article_text, article_author, article_date) VALUES(2, 'Abot Us', 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 'Heba Korany', '". date('l jS \of F Y h:i A') ."')";
+$ins = "INSERT INTO articles(article_id, article_title, article_text, article_author) VALUES(2, 'Abot Us', 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 'Heba Korany')";
 $ads = pg_exec($db, $ins);
 var_dump($ads);
 
