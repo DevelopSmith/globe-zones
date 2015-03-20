@@ -26,7 +26,7 @@ $ftchd = pg_fetch_array($selt);
 var_dump($ftchd);
 
 foreach($ftchd as $row){
-	echo '<h1>'. $row['title'] .'</h1>';
-	echo '<p>'. $row['context'] .'</p>';
+	echo '<h1>'. $row['article_title'] .'</h1>';
+	echo '<p>'. $row['article_text'] .'</p>';
 }
 ?>
